@@ -11,8 +11,8 @@ useEffect(() => {
     axios.get(NASA_URL)
     .then(res => {
       console.log("We can hear you loud and clear, New Orleans!")
-      console.log(res.data.photos[0].img_src)
-      setPhotos(res.data.photos)
+      console.log(res.data.photos[0].rover.name)
+      setPhotos(res.data.photos.slice(14, 20))
     })
     .catch(() => {
       console.log("Sorry New Orleans its all dark!")
@@ -24,10 +24,6 @@ useEffect(() => {
       <div className="Photo-Container">
         <Photos photos={photo} />
       </div>
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
     </div>
   );
 }
