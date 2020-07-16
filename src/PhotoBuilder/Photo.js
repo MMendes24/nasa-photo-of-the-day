@@ -4,14 +4,18 @@ import styled from 'styled-components'
 
 const PhotoStyles = styled.img`
 
-    width:100%;
-    height:75%;
-    border: 1px solid black;
+    width: 75%;
+    height: 400px;
+    margin: 0% 5% 0% 5%;
 
 `
 
 const ContainerStyles = styled.div`
     padding:2%;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
     
 `
 

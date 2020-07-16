@@ -5,8 +5,9 @@ import styled from 'styled-components'
 const GalleryStyles = styled.div`
 
 display:flex;
-justify-content:center;
-padding:5%;
+flex-direction: column;
+align-items:center;
+padding:2%;
 
 `
 

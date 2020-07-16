@@ -10,8 +10,8 @@ import NavMenu from './StyleComponents/NavMenu'
 const martianRed = '#a1251b'
 
 const AppStyles = styled.div`
-  width:90%;
-  margin:0% 5%;
+  width:80%;
+  margin:0% 10%;
   font-family: Georgia;
   color: antiquewhite;
   background-color: ${martianRed}; 
@@ -28,7 +28,7 @@ useEffect(() => {
     axios.get(NASA_URL)
     .then(res => {
       console.log("We can hear you loud and clear, New Orleans!")
-      setData(res.data.photos.slice(14, 17))
+      setData(res.data.photos.slice(1, 4))
     })
     .catch(() => {
       console.log("Sorry New Orleans its all dark!")
@@ -39,7 +39,7 @@ useEffect(() => {
     axios.get(NASA_URL)
     .then(res => {
       console.log("We can hear you loud and clear, New Orleans!")
-      setDataTwo(res.data.photos.slice(11, 14))
+      setDataTwo(res.data.photos.slice(84, 87))
     })
     .catch(() => {
       console.log("Sorry New Orleans its all dark!")
