@@ -1,13 +1,12 @@
 import React from 'react';
-import PhotoHeader from '../Desc/PhotoHeader'
+import PostHeader from '../Desc/PhotoHeader'
 
 const Photo = props => {
     const { photo } = props
-    console.log("hey hey, photo object-san!")
-
+    
     return (
         <div className="image-container">
-        {/* <PhotoHeader props={photo.rover.name} /> */}
+        <PostHeader name={photo.rover.name} full_name={photo.camera.full_name} date={photo.earth_date}/>
         <img className="mars" alt="" src={photo.img_src} />
         </div>
     )

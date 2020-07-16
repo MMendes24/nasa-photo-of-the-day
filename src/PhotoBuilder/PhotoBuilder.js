@@ -8,7 +8,7 @@ const Photos = (props) => {
       <div className="photo-gallery">
         {
         photos.map(photos => 
-        <Photo photo={photos} key={photos.id}/>)
+        <Photo photo={photos} key={photos.id}  />)
         }
       </div>
     );
