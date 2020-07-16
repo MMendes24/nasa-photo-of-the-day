@@ -7,6 +7,7 @@ const PhotoStyles = styled.img`
     width: 75%;
     height: 400px;
     margin: 0% 5% 0% 5%;
+    border: 5px solid antiquewhite;
 
 `
 

@@ -20,6 +20,7 @@ width: 75%;
             font-size: 1.5rem;
             padding:3%;
             font-style: italic;
+            text-decoration: underline;
         }
 
         p {
@@ -27,9 +28,6 @@ width: 75%;
             font-size: 1.2rem;
         }
 
-        span {
-            text-decoration: underline;
-        }
 `
 
 const PhotoSubheading = styled.div`

@@ -15,14 +15,14 @@ const AppStyles = styled.div`
   font-family: Georgia;
   color: antiquewhite;
   background-color: ${martianRed}; 
-  opacity:0.8;
+  opacity:0.9;
   border: 10px solid black;
 `
 
 function App() {
 const NASA_URL = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2019-5-23&api_key=Qk9nJggwnMMmooGAW4JlbP5qotpE67j6TS05AmOW'
 const [data, setData] = useState([])
-const [dataTwo, setDataTwo] = useState([])
+// const [dataTwo, setDataTwo] = useState([])
   
 useEffect(() => {
     axios.get(NASA_URL)
@@ -35,16 +35,16 @@ useEffect(() => {
     })
   },[]);
 
-  useEffect(() => {
-    axios.get(NASA_URL)
-    .then(res => {
-      console.log("We can hear you loud and clear, New Orleans!")
-      setDataTwo(res.data.photos.slice(84, 87))
-    })
-    .catch(() => {
-      console.log("Sorry New Orleans its all dark!")
-    })
-  },[]);
+  // useEffect(() => {
+  //   axios.get(NASA_URL)
+  //   .then(res => {
+  //     console.log("We can hear you loud and clear, New Orleans!")
+  //     setDataTwo(res.data.photos.slice(84, 87))
+  //   })
+  //   .catch(() => {
+  //     console.log("Sorry New Orleans its all dark!")
+  //   })
+  // },[]);
 
   return (
     <AppStyles className="App">
@@ -52,7 +52,7 @@ useEffect(() => {
       <NavMenu />
       <div className="Photo-Container">
         <Photos photos={data} />
-        <Photos photos={dataTwo} />
+        {/* <Photos photos={dataTwo} /> */}
       </div>
       <PageFooter />
     </AppStyles>
