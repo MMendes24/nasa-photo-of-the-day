@@ -6,7 +6,7 @@ const GalleryStyles = styled.div`
 
 display:flex;
 justify-content:center;
-flex-wrap:wrap;
+padding:5%;
 
 `
 
